@@ -8,4 +8,4 @@
    command:
      - bash
      - -c
-     - "echo hello ${{ inputs.who }} && export HELLO=world && touch test123 && echo test $TEST"
+     - "echo hello ${{ inputs.who }} && export HELLO=world && touch test123 && echo hello $HELLO && echo test $TEST && ls -la"
