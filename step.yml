@@ -1,0 +1,15 @@
+spec:
+  inputs:
+    languages:
+    dd_site:
+      default: datadoghq.com
+    dd_api_key:
+      default: ""
+    dd_service:
+      default: ""
+ ---
+ exec:
+   command:
+     - bash
+     - -c
+     - "echo hello ${{ inputs.dd_site }}"
