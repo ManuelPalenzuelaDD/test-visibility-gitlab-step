@@ -8,4 +8,4 @@
    command:
      - bash
      - -c
-     - "npm -v"
+     - "echo hello ${{ inputs.who }} && export HELLO=world && touch test123 && echo hello $HELLO && echo test $TEST && ls -la && echo ${{ export_file }} && echo HELLO=world >> ${{ export_file}} && cat {{ export_file}}"
