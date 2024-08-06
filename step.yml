@@ -3,9 +3,12 @@
    inputs:
      who:
        default: world
+   outputs:
+    test123: string
+    HELLO: string
 ---
  exec:
    command:
      - bash
      - -c
-     - "echo hello ${{ inputs.who }} && export HELLO=world && touch test123 && echo hello $HELLO && echo test $TEST && ls -la && echo ${{ export_file }} && echo HELLO=world >> ${{ export_file}} && cat {{ export_file}}"
+     - "echo hello ${{ inputs.who }} && export HELLO=world && touch test123 && echo hello $HELLO && echo test $TEST && ls -la && echo ${{ export_file }} && echo HELLO=world >> ${{ export_file}} && cat ${{ export_file}} && echo test123 > {{ output_file }}"
