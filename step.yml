@@ -5,6 +5,7 @@
        default: world
 ---
  exec:
-  script:
-    - echo "HELLO WORLDW!"
-    - echo "Hi"
+   command:
+     - bash
+     - -c
+     - "echo hello ${{ inputs.who }} && export HELLO=world && touch test123"
