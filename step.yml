@@ -4,8 +4,10 @@
      who:
        default: world
    outputs:
-    test123: string
-    HELLO: string
+    test123:
+      type: string
+    HELLO:
+      type: string
 ---
  exec:
    command:
